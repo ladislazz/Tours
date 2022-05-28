@@ -24,8 +24,6 @@ function App() {
     fetchTours();
   }, []);
 
-  console.log(tours);
-
   if (isLoading) {
     return <Loading />;
   }
@@ -36,7 +34,7 @@ function App() {
           <h2>our tours</h2>
           <div className="underline"></div>
         </div>
-        <Tours />
+        <Tours tours={tours} />
       </section>
     </main>
   );

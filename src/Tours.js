@@ -1,7 +1,14 @@
 import React from 'react';
 import Tour from './Tour';
-const Tours = () => {
-  return <h2>tours component</h2>;
+const Tours = ({ tours }) => {
+  return (
+    <div>
+      {tours.map((tour) => {
+        const { id } = tour;
+        return <Tour key={id} />;
+      })}
+    </div>
+  );
 };
 
 export default Tours;
