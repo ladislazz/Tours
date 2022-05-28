@@ -25,7 +25,11 @@ function App() {
   }, []);
 
   if (isLoading) {
-    return <Loading />;
+    return (
+      <main>
+        <Loading />
+      </main>
+    );
   }
   return (
     <main>
