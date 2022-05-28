@@ -5,7 +5,17 @@ import Tours from './Tours';
 // I SWITCHED TO PERMANENT DOMAIN
 const url = 'https://course-api.com/react-tours-project';
 function App() {
-  return <h2>Tours Project Setup</h2>;
+  return (
+    <main>
+      <section>
+        <div className="title">
+          <h2>our tours</h2>
+          <div className="underline"></div>
+        </div>
+        <Tours />
+      </section>
+    </main>
+  );
 }
 
 export default App;
