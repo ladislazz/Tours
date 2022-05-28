@@ -8,6 +8,11 @@ function App() {
   const [isLoading, setIsLoading] = useState(true);
   const [tours, setTours] = useState([]);
 
+  const removeTour = (id) => {
+    const newTours = tours.filter((tour) => tour.id !== id);
+    setTours(newTours);
+  };
+
   const fetchTours = async () => {
     try {
       const response = await fetch(url);
@@ -38,7 +43,7 @@ function App() {
           <h2>our tours</h2>
           <div className="underline"></div>
         </div>
-        <Tours tours={tours} />
+        <Tours tours={tours} removeTour={removeTour} />
       </section>
     </main>
   );
